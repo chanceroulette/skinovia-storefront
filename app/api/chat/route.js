@@ -66,6 +66,15 @@ async function callOpenAI(key, messages) {
   return data?.choices?.[0]?.message?.content || null;
 }
 
+export async function GET() {
+  const provider = process.env.ANTHROPIC_API_KEY
+    ? 'anthropic'
+    : process.env.OPENAI_API_KEY
+    ? 'openai'
+    : 'none';
+  return Response.json({ ai: provider !== 'none', provider });
+}
+
 export async function POST(request) {
   try {
     const body = await request.json();
