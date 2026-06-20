@@ -66,24 +66,13 @@ async function callOpenAI(key, messages) {
   return data?.choices?.[0]?.message?.content || null;
 }
 
-export async function GET(request) {
+export async function GET() {
   const provider = process.env.ANTHROPIC_API_KEY
     ? 'anthropic'
     : process.env.OPENAI_API_KEY
     ? 'openai'
     : 'none';
-  const selftest = new URL(request.url).searchParams.get('selftest') === '1';
-  if (!selftest) return Response.json({ ai: provider !== 'none', provider });
-  // Temporary live check: makes one tiny call to confirm the key actually works.
-  try {
-    const probe = [{ role: 'user', content: 'Reply with the single word: ok' }];
-    let reply = null;
-    if (process.env.ANTHROPIC_API_KEY) reply = await callAnthropic(process.env.ANTHROPIC_API_KEY, probe);
-    else if (process.env.OPENAI_API_KEY) reply = await callOpenAI(process.env.OPENAI_API_KEY, probe);
-    return Response.json({ ai: provider !== 'none', provider, ok: Boolean(reply), sample: reply ? reply.slice(0, 40) : null });
-  } catch (e) {
-    return Response.json({ ai: provider !== 'none', provider, ok: false, error: String(e).slice(0, 120) });
-  }
+  return Response.json({ ai: provider !== 'none', provider });
 }
 
 export async function POST(request) {
