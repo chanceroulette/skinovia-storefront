@@ -117,18 +117,28 @@ export default function Hero() {
     };
   }, []);
 
+  const wordmark = {
+    position: 'absolute', left: '50%', top: '44%', transform: 'translate(-50%,-50%)',
+    fontFamily: "'Cormorant Garamond',serif", fontWeight: 300,
+    fontSize: 'clamp(120px,25vw,400px)', letterSpacing: '0.05em',
+    color: 'rgba(201,177,138,0.055)', whiteSpace: 'nowrap',
+    zIndex: 1, pointerEvents: 'none', userSelect: 'none'
+  };
+
   return (
     <section className="hero">
       <canvas ref={canvasRef} />
       <div className="veil" />
+      <div aria-hidden="true" style={wordmark}>SKINOVIA</div>
       <div className="inner">
-        <p className="over">AI DERMAL ANALYSIS — DUBAI</p>
+        <p className="over">✦ ADVANCED LIGHT &amp; LASER DERMATOLOGY — DUBAI</p>
         <h1>Mapped by light,<br />renewed by <em>laser.</em></h1>
-        <p className="lead">Precision wavelength therapy that reads your skin before it treats it — clinical devices and longevity formulas, calibrated for the modern complexion.</p>
+        <p className="lead">Clinical-grade light, laser and longevity skincare — calibrated to the wavelengths your skin actually responds to. Curated for the modern complexion.</p>
         <div className="cta-row">
           <Link className="btn" href="/shop">Explore the collection</Link>
           <Link className="btn ghost" href="/shop">Take the skin analysis</Link>
         </div>
+        <p className="micro">Complimentary next-day delivery across the UAE · Dermatologist-calibrated</p>
       </div>
     </section>
   );
