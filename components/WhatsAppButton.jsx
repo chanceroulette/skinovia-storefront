@@ -1,6 +1,6 @@
 export default function WhatsAppButton() {
-  // Replace with your real UAE WhatsApp number (set NEXT_PUBLIC_WHATSAPP in Vercel).
-  const num = process.env.NEXT_PUBLIC_WHATSAPP || '971500000000';
+  // Real UAE WhatsApp number (override with NEXT_PUBLIC_WHATSAPP in Vercel if needed).
+  const num = process.env.NEXT_PUBLIC_WHATSAPP || '971543481109';
   return (
     <a
       className="wa"

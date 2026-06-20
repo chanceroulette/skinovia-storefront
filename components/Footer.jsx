@@ -34,7 +34,7 @@ export default function Footer() {
         <span className="social">
           <a href="https://www.instagram.com/skinovia" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.tiktok.com/@skinovia" target="_blank" rel="noopener noreferrer">TikTok</a>
-          <a href="https://wa.me/971500000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://wa.me/971543481109" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </span>
       </div>
     </>
