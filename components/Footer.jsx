@@ -32,7 +32,7 @@ export default function Footer() {
       <div className="foot-bar">
         <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Dubai, UAE</span>
         <span className="social">
-          <a href="https://www.instagram.com/skinovia" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.instagram.com/skinovia.skincare" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.tiktok.com/@skinovia" target="_blank" rel="noopener noreferrer">TikTok</a>
           <a href="https://wa.me/971543481109" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </span>

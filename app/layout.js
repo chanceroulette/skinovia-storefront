@@ -53,8 +53,9 @@ const orgLd = {
   url: 'https://skinovia.ae',
   legalName: 'Opera Engineering FZ-LLC',
   email: 'admin@skinovia.ae',
-  address: { '@type': 'PostalAddress', addressLocality: 'Dubai', addressCountry: 'AE' },
-  sameAs: ['https://www.instagram.com/skinovia', 'https://www.tiktok.com/@skinovia']
+  telephone: '+971543481109',
+  address: { '@type': 'PostalAddress', streetAddress: "FXMB0229 Compass Building, Al Shuhada' Road", addressLocality: 'Ras Al Khaimah', addressRegion: 'Ras Al Khaimah', addressCountry: 'AE' },
+  sameAs: ['https://www.instagram.com/skinovia.skincare', 'https://www.tiktok.com/@skinovia']
 };
 const siteLd = {
   '@context': 'https://schema.org',

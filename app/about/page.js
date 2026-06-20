@@ -18,10 +18,11 @@ export default function About() {
         <p>
           Brand: Skinovia<br />
           Legal entity: Opera Engineering FZ-LLC<br />
-          Registered address: FXMB0229, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates<br />
-          Licence no.: Project Management Consultancy 6004991 · E-Commerce Through Websites 45007041<br />
-          VAT (TRN): 104305889800003<br />
-          Email: hello@skinovia.ae · Support: support@skinovia.ae<br />
+          Jurisdiction: Free Zone (RAKEZ) · Ras Al Khaimah, UAE<br />
+          Registered address: FXMB0229 Compass Building, Al Shuhada&apos; Road, Ras Al Khaimah, UAE<br />
+          Licence no.: <span className="todo">[DA COMPLETARE]</span><br />
+          Tax reg. (TRN): <span className="todo">[DA COMPLETARE]</span><br />
+          Email: admin@skinovia.ae<br />
           Phone / WhatsApp: +971 54 348 1109<br />
           Website: skinovia.ae
         </p>
