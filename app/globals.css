@@ -55,13 +55,19 @@ img{max-width:100%;display:block}
 .am-bot{align-self:flex-start;background:#F0E8DB;color:#3a3328;border-bottom-left-radius:4px}
 .am-bot a{color:#8a6a2f;text-decoration:underline}
 .am-user{align-self:flex-end;background:#231e17;color:#F4EEE6;border-bottom-right-radius:4px}
+.am-typing{display:flex;gap:5px;align-items:center}
+.am-typing span{width:6px;height:6px;border-radius:50%;background:#b9a988;display:inline-block;animation:asstDot 1s infinite ease-in-out}
+.am-typing span:nth-child(2){animation-delay:.15s}.am-typing span:nth-child(3){animation-delay:.3s}
+@keyframes asstDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
 .asst-quick{display:flex;flex-wrap:wrap;gap:7px;padding:10px 14px 0}
 .asst-quick button{font-size:11px;letter-spacing:.04em;padding:8px 12px;border:1px solid var(--line);background:#fff;border-radius:20px;cursor:pointer;color:#3a3328;transition:border-color .3s,background .3s}
 .asst-quick button:hover{border-color:var(--gold);background:#FAF6EF}
+.asst-quick button:disabled{opacity:.5;cursor:default}
 .asst-input{display:flex;gap:8px;padding:12px 14px}
 .asst-input input{flex:1;border:1px solid var(--line);border-radius:24px;padding:11px 15px;font-size:13.5px;font-family:var(--sans);outline:none;color:var(--ink)}
 .asst-input input:focus{border-color:var(--gold)}
 .asst-input button{width:42px;border:0;border-radius:50%;background:#231e17;color:#F4EEE6;font-size:16px;cursor:pointer;transition:background .3s}.asst-input button:hover{background:#000}
+.asst-input button:disabled{opacity:.5;cursor:default}
 @media(max-width:780px){.asst-fab{right:16px;bottom:16px;width:52px;height:52px}.asst-panel{right:16px;left:16px;bottom:80px;width:auto;height:min(70vh,520px)}}
 
 /* Hero — editorial light (rejuvenation) */
