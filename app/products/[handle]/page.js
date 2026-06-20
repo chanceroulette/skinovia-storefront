@@ -1,6 +1,7 @@
-import Image from 'next/image';
-import { getProduct, formatPrice } from '@/lib/shopify';
-import AddToCart from '@/components/AddToCart';
+import { getProduct, getProducts, formatPrice } from '@/lib/shopify';
+import ProductGallery from '@/components/ProductGallery';
+import ProductCard from '@/components/ProductCard';
+import BuyBox from '@/components/BuyBox';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,15 +36,25 @@ export default async function ProductPage({ params }) {
     );
   }
 
-  const img = product.featuredImage?.url;
   const variant = product.variants?.edges?.[0]?.node;
   const price = product.priceRange?.minVariantPrice;
+  const priceText = formatPrice(price);
+
+  let images = product.images?.edges?.map((e) => e.node).filter((n) => n && n.url) || [];
+  if (images.length === 0 && product.featuredImage?.url) images = [product.featuredImage];
+
+  let related = [];
+  try {
+    related = (await getProducts(8)).filter((p) => p.handle !== product.handle).slice(0, 4);
+  } catch {
+    related = [];
+  }
 
   const productLd = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: product.title,
-    image: img ? [img] : [],
+    image: images.map((im) => im.url),
     description: product.description || '',
     brand: { '@type': 'Brand', name: 'Skinovia' },
     offers: {
@@ -56,33 +67,33 @@ export default async function ProductPage({ params }) {
   };
 
   return (
-    <main className="pdp">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }} />
-      <div className="gallery">
-        {img ? (
-          <Image
-            src={img}
-            alt={product.featuredImage?.altText || product.title}
-            fill
-            sizes="(max-width:880px) 100vw, 600px"
-            style={{ objectFit: 'cover' }}
-            priority
-          />
-        ) : null}
-      </div>
-      <div>
-        <h1>{product.title}</h1>
-        <div className="price">{formatPrice(price)}</div>
-        <div className="trustline">
-          <span>✦ Authentic &amp; sealed</span>
-          <span>✦ 14-day returns</span>
-          <span>✦ Next-day UAE delivery</span>
+    <>
+      <main className="pdp">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }} />
+        <ProductGallery images={images} title={product.title} />
+        <div>
+          <h1>{product.title}</h1>
+          <div className="price">{priceText}</div>
+          <div className="trustline">
+            <span>✦ Authentic &amp; sealed</span>
+            <span>✦ 14-day returns</span>
+            <span>✦ Next-day UAE delivery</span>
+          </div>
+          <div className="desc" dangerouslySetInnerHTML={{ __html: product.descriptionHtml || '' }} />
+          <div style={{ marginTop: 28 }}>
+            <BuyBox variantId={variant?.id} available={variant?.availableForSale} price={priceText} />
+          </div>
         </div>
-        <div className="desc" dangerouslySetInnerHTML={{ __html: product.descriptionHtml || '' }} />
-        <div style={{ marginTop: 32 }}>
-          <AddToCart variantId={variant?.id} available={variant?.availableForSale} />
-        </div>
-      </div>
-    </main>
+      </main>
+
+      {related.length > 0 && (
+        <section className="block">
+          <p className="lbl">YOU MAY ALSO LIKE</p>
+          <div className="pgrid">
+            {related.map((p) => <ProductCard key={p.id} product={p} />)}
+          </div>
+        </section>
+      )}
+    </>
   );
 }
