@@ -6,7 +6,7 @@ import { getProducts } from '@/lib/shopify';
 export const dynamic = 'force-dynamic';
 
 export default async function Home() {
-  const products = await getProducts(4);
+  const products = await getProducts(50);
 
   return (
     <>
