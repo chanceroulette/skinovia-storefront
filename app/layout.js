@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter } from 'next/font/google';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import Assistant from '@/components/Assistant';
 
 const serif = Cormorant_Garamond({
   subsets: ['latin'],
@@ -72,6 +73,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <WhatsAppButton />
+        <Assistant />
       </body>
     </html>
   );
