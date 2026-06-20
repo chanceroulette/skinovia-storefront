@@ -3,6 +3,8 @@ import Reveal from '@/components/Reveal';
 import ProductCard from '@/components/ProductCard';
 import { getProducts } from '@/lib/shopify';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const products = await getProducts(4);
 
@@ -12,10 +14,10 @@ export default async function Home() {
       <div className="wrap">
         <section>
           <div className="trust">
-            <Reveal><div><b>633nm</b>Clinical red-light therapy</div></Reveal>
-            <Reveal delay={0.1}><div><b>72h</b>Next-day Emirates delivery</div></Reveal>
-            <Reveal delay={0.2}><div><b>4.9★</b>Across 12,000 reviews</div></Reveal>
-            <Reveal delay={0.3}><div><b>0%</b>Fillers, parabens, theatre</div></Reveal>
+            <Reveal><div><b>Next-day</b>Delivery across the UAE</div></Reveal>
+            <Reveal delay={0.1}><div><b>14-day</b>Easy returns</div></Reveal>
+            <Reveal delay={0.2}><div><b>100%</b>Authentic &amp; sealed</div></Reveal>
+            <Reveal delay={0.3}><div><b>VAT</b>Included in all prices</div></Reveal>
           </div>
         </section>
 
@@ -58,7 +60,7 @@ export default async function Home() {
         <section className="block center">
           <Reveal><p className="lbl">THE SCIENCE</p></Reveal>
           <Reveal><h2 className="sec-h" style={{ margin: '0 auto 24px' }}>Light is the active ingredient.</h2></Reveal>
-          <Reveal><p className="lead" style={{ margin: '0 auto', color: '#A99C88' }}>Every device is calibrated to the wavelengths your skin actually responds to — measured, not marketed.</p></Reveal>
+          <Reveal><p className="lead" style={{ margin: '0 auto' }}>Every formula is calibrated to what your skin actually responds to — measured, not marketed.</p></Reveal>
           <div className="pillars">
             <Reveal><div className="pillar"><div className="big">633<span style={{ fontSize: 24 }}>nm</span></div><h4>Red Light</h4><p>Stimulates fibroblasts and collagen synthesis at the dermal layer.</p></div></Reveal>
             <Reveal delay={0.1}><div className="pillar"><div className="big">830<span style={{ fontSize: 24 }}>nm</span></div><h4>Near-Infrared</h4><p>Penetrates deep to accelerate repair and cellular energy.</p></div></Reveal>

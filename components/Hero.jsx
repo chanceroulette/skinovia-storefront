@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HERO_IMG =
   'https://d8j0ntlcm91z4.cloudfront.net/user_3EQeR6AMjc6LGT7xL4cimnNPhHk/hf_20260620_073656_19ceddb9-f3af-4fdf-95a4-280441143ac5.png';
@@ -35,7 +36,16 @@ export default function Hero() {
 
   return (
     <section className="heroE" ref={sectionRef}>
-      <div className="heroE-ph" ref={phRef} style={{ backgroundImage: `url(${HERO_IMG})` }} />
+      <div className="heroE-ph" ref={phRef}>
+        <Image
+          src={HERO_IMG}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'right center' }}
+        />
+      </div>
       <div className="heroE-inner">
         <p className="heroE-over"><b>Skinovia</b> &nbsp;·&nbsp; Advanced skincare — Dubai</p>
         <h1>Rejuvenation,<br /><em>refined.</em></h1>

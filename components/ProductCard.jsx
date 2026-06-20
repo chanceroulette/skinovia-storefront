@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { formatPrice } from '@/lib/shopify';
 
 export default function ProductCard({ product }) {
@@ -6,7 +7,15 @@ export default function ProductCard({ product }) {
   return (
     <Link className="card" href={`/products/${product.handle}`}>
       <div className="media">
-        {img ? <img src={img} alt={product.featuredImage?.altText || product.title} /> : null}
+        {img ? (
+          <Image
+            src={img}
+            alt={product.featuredImage?.altText || product.title}
+            fill
+            sizes="(max-width:780px) 100vw, 300px"
+            style={{ objectFit: 'cover' }}
+          />
+        ) : null}
       </div>
       <div className="info">
         <div className="t">{product.title}</div>

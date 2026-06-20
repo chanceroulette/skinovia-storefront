@@ -6,7 +6,8 @@ export default function Footer() {
       <footer className="foot">
         <div className="brand">
           <div className="mark">SKINOVIA</div>
-          <p>Advanced light &amp; laser dermatology, engineered for the modern complexion. Dubai, UAE.</p>
+          <p>Advanced anti-aging skincare and beauty-tech, engineered for the modern complexion. Dubai, UAE.</p>
+          <p className="footmail"><a href="mailto:admin@skinovia.ae">admin@skinovia.ae</a></p>
         </div>
         <div className="col">
           <h4>Shop</h4>
@@ -29,8 +30,12 @@ export default function Footer() {
         </div>
       </footer>
       <div className="foot-bar">
-        <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Dubai, UAE · skinovia.ae</span>
-        <span>Instagram · TikTok · WhatsApp</span>
+        <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Dubai, UAE</span>
+        <span className="social">
+          <a href="https://www.instagram.com/skinovia" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@skinovia" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://wa.me/971500000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </span>
       </div>
     </>
   );

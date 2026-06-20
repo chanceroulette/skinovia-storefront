@@ -1,7 +1,13 @@
 import ProductCard from '@/components/ProductCard';
 import { getProducts, shopifyConfigured } from '@/lib/shopify';
 
-export const metadata = { title: 'Shop — Skinovia' };
+export const dynamic = 'force-dynamic';
+
+export const metadata = {
+  title: 'Shop — Skinovia',
+  description: 'Shop Skinovia anti-aging serums and beauty-tech. Authentic, sealed, with next-day delivery across the UAE.',
+  alternates: { canonical: '/shop' }
+};
 
 export default async function Shop() {
   const products = await getProducts(48);
@@ -17,7 +23,7 @@ export default async function Shop() {
       ) : (
         <div className="empty">
           {shopifyConfigured()
-            ? 'No published products yet. They will appear here as soon as they go live.'
+            ? 'New products are on their way — check back very soon.'
             : 'Storefront not connected yet. Add SHOPIFY_STORE_DOMAIN and SHOPIFY_STOREFRONT_TOKEN in Vercel to load products.'}
         </div>
       )}
