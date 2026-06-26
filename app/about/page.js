@@ -5,15 +5,15 @@ export default function About() {
     <>
       <div className="phead">
         <p className="over">OUR STORY</p>
-        <h1>Skin science,<br />without the theatre.</h1>
-        <p className="sub">Skinovia exists to make clinical-grade light and laser skincare something you can use at home — calibrated to the wavelengths your skin actually responds to.</p>
+        <h1>Beauty,<br />carefully curated.</h1>
+        <p className="sub">Skinovia is a UAE beauty house. We hand-pick skincare, hair and make-up from brands we trust, check that every item is authentic and sealed, and deliver it fast across the Emirates.</p>
       </div>
       <main className="doc">
         <h2>What we believe</h2>
-        <p>Most skincare sells a feeling. We sell a measurement. Every Skinovia product is built around the specific actives and wavelengths that research has shown to influence collagen, barrier repair, tone and density. No fillers. No parabens. No theatre.</p>
-        <p>We are a UAE company, built for the realities of skin in this climate: intense sun, dry air, long days. Our protocols defend the barrier, restore radiance, and treat the concerns that matter rather than the ones that photograph well.</p>
+        <p>Beauty shopping in the region is noisy — too many sellers, too many fakes, prices that make no sense. Skinovia exists to cut through that. We carry a focused edit of products we would actually use, from multiple premium brands, and we stand behind every one as genuine and sealed.</p>
+        <p>We are a UAE company, built for skin and hair in this climate: intense sun, dry air, long days. We choose products that hold up here — and we price them fairly, with VAT always included.</p>
         <h2>How we work</h2>
-        <p>Skinovia curates a focused range of premium skincare and beauty-tech, each rebuilt to our standard of design, packaging and instruction. Orders across the Emirates ship fast from local stock, so the time between decision and ritual is measured in hours, not weeks.</p>
+        <p>Skinovia curates across categories — skincare, hair, make-up, body and beauty-tech — selecting the brands and products that earn their place. Orders ship fast from local UAE stock, so the time between decision and delivery is measured in days, not weeks. Tracking is sent on every order.</p>
         <h2>Company details</h2>
         <p>
           Brand: Skinovia<br />

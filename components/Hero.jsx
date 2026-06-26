@@ -47,12 +47,12 @@ export default function Hero() {
         />
       </div>
       <div className="heroE-inner">
-        <p className="heroE-over"><b>Skinovia</b> &nbsp;·&nbsp; Advanced skincare — Dubai</p>
-        <h1>Rejuvenation,<br /><em>refined.</em></h1>
+        <p className="heroE-over"><b>Skinovia</b> &nbsp;·&nbsp; A curated beauty house — UAE</p>
+        <h1>The best of beauty,<br /><em>delivered fast.</em></h1>
         <div className="heroE-hr" />
-        <p className="heroE-lead">Dermatologist-grade formulas and light-based devices that restore firmness, glow and youth — delivered across the UAE.</p>
+        <p className="heroE-lead">A hand-picked edit of skincare, hair and make-up from the brands we trust — authentic, sealed and delivered fast across the UAE.</p>
         <div className="cta-row">
-          <Link className="btn" href="/shop">Discover Skinovia</Link>
+          <Link className="btn" href="/shop">Shop the edit</Link>
           <Link className="btn ghost" href="/shop">Skin analysis</Link>
         </div>
       </div>
