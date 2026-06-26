@@ -6,14 +6,14 @@ export default function Footer() {
       <footer className="foot">
         <div className="brand">
           <div className="mark">SKINOVIA</div>
-          <p>Advanced anti-aging skincare and beauty-tech, engineered for the modern complexion. Dubai, UAE.</p>
+          <p>A curated house of skincare, hair, make-up and beauty-tech from the brands we trust — delivered fast across the UAE.</p>
           <p className="footmail"><a href="mailto:admin@skinovia.ae">admin@skinovia.ae</a></p>
         </div>
         <div className="col">
           <h4>Shop</h4>
           <Link href="/shop">All products</Link>
-          <Link href="/shop">Serums</Link>
-          <Link href="/shop">Skin Analysis</Link>
+          <Link href="/shop">Skincare</Link>
+          <Link href="/shop">Make-up</Link>
         </div>
         <div className="col">
           <h4>Company</h4>
