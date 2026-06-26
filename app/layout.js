@@ -24,24 +24,24 @@ const HERO_OG =
 
 export const metadata = {
   metadataBase: new URL('https://skinovia.ae'),
-  title: 'Skinovia — Advanced Anti-Aging Skincare | Dubai, UAE',
+  title: 'Skinovia — Curated Beauty, Delivered Fast | Dubai, UAE',
   description:
-    'Luxury anti-aging skincare and beauty-tech for visibly firmer, luminous, rejuvenated skin. Dermatologist-grade formulas, delivered next day across the UAE.',
-  keywords: ['skincare Dubai', 'anti-aging UAE', 'luxury skincare UAE', 'lash serum Dubai', 'rejuvenation skincare', 'Skinovia'],
+    'A curated multi-brand beauty house in the UAE — hand-picked skincare, hair, make-up and beauty-tech, authentic and sealed, delivered fast across the Emirates. VAT included.',
+  keywords: ['beauty UAE', 'skincare Dubai', 'makeup Dubai', 'beauty devices UAE', 'fast beauty delivery UAE', 'Skinovia'],
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     url: 'https://skinovia.ae',
     siteName: 'Skinovia',
     locale: 'en_AE',
-    title: 'Skinovia — Advanced Anti-Aging Skincare',
-    description: 'Luxury anti-aging skincare and beauty-tech, delivered next day across the UAE.',
-    images: [{ url: HERO_OG, width: 1200, height: 630, alt: 'Skinovia — advanced anti-aging skincare' }]
+    title: 'Skinovia — Curated Beauty, Delivered Fast',
+    description: 'Hand-picked skincare, hair, make-up and beauty-tech — authentic, sealed and delivered fast across the UAE.',
+    images: [{ url: HERO_OG, width: 1200, height: 630, alt: 'Skinovia — curated beauty house, UAE' }]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Skinovia — Advanced Anti-Aging Skincare',
-    description: 'Luxury anti-aging skincare, delivered next day across the UAE.',
+    title: 'Skinovia — Curated Beauty, Delivered Fast',
+    description: 'Hand-picked beauty from the brands we trust — delivered fast across the UAE.',
     images: [HERO_OG]
   }
 };

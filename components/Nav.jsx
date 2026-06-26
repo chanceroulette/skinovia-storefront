@@ -29,7 +29,7 @@ export default function Nav() {
         <Link href="/about">ABOUT</Link>
         <Link href="/faq">FAQ</Link>
         <Link href="/contact">CONTACT</Link>
-        <Link className="cta" href="/shop">✦ SKIN ANALYSIS</Link>
+        <Link className="cta" href="/skin-analysis">✦ SKIN ANALYSIS</Link>
       </nav>
 
       <button
@@ -46,7 +46,7 @@ export default function Nav() {
         <Link href="/about" onClick={close}>About</Link>
         <Link href="/faq" onClick={close}>FAQ</Link>
         <Link href="/contact" onClick={close}>Contact</Link>
-        <Link className="cta" href="/shop" onClick={close}>✦ SKIN ANALYSIS</Link>
+        <Link className="cta" href="/skin-analysis" onClick={close}>✦ SKIN ANALYSIS</Link>
       </nav>
     </header>
   );
