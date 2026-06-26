@@ -53,7 +53,7 @@ export default function Hero() {
         <p className="heroE-lead">A hand-picked edit of skincare, hair and make-up from the brands we trust — authentic, sealed and delivered fast across the UAE.</p>
         <div className="cta-row">
           <Link className="btn" href="/shop">Shop the edit</Link>
-          <Link className="btn ghost" href="/shop">Skin analysis</Link>
+          <Link className="btn ghost" href="/skin-analysis">Skin analysis</Link>
         </div>
       </div>
     </section>
