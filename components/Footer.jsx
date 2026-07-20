@@ -32,8 +32,13 @@ export default function Footer() {
       <div className="foot-bar">
         <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Dubai, UAE</span>
         <span className="social">
-          <a href="https://www.instagram.com/skinovia.skincare" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://www.tiktok.com/@skinovia" target="_blank" rel="noopener noreferrer">TikTok</a>
+          {/*
+            Instagram and TikTok links removed on 2026-07-20.
+            @skinovia.skincare did not exist (Instagram 404) and @skinovia on
+            TikTok belongs to an unrelated business ("Skinovia BD", Bangladesh).
+            Restore here — and in the Organization JSON-LD `sameAs` array in
+            app/layout.js — once the official profiles are registered.
+          */}
           <a href="https://wa.me/971543481109" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </span>
       </div>
