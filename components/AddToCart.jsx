@@ -1,12 +1,19 @@
 'use client';
 import { useState } from 'react';
+import { trackInitiateCheckout } from '@/lib/track';
 
-export default function AddToCart({ variantId, available }) {
+export default function AddToCart({ variantId, available, productTitle, amount, currency }) {
   const [loading, setLoading] = useState(false);
 
   async function buy() {
     if (!variantId) return;
     setLoading(true);
+
+    // Analytics is best-effort: never let it block or break the purchase.
+    try {
+      trackInitiateCheckout({ id: variantId, title: productTitle, amount, currency, quantity: 1 });
+    } catch {}
+
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',

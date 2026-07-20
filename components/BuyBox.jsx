@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
+import { trackInitiateCheckout } from '@/lib/track';
 
-export default function BuyBox({ variantId, available, price }) {
+export default function BuyBox({ variantId, available, price, productTitle, amount, currency }) {
   const [qty, setQty] = useState(1);
   const [loading, setLoading] = useState(false);
   const [err, setErr] = useState('');
@@ -11,6 +12,18 @@ export default function BuyBox({ variantId, available, price }) {
     if (!variantId || loading || sold) return;
     setLoading(true);
     setErr('');
+
+    // Analytics is best-effort: never let it block or break the purchase.
+    try {
+      trackInitiateCheckout({
+        id: variantId,
+        title: productTitle,
+        amount,
+        currency,
+        quantity: qty
+      });
+    } catch {}
+
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',

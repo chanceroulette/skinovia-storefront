@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Assistant from '@/components/Assistant';
+import Analytics from '@/components/Analytics';
 
 const serif = Cormorant_Garamond({
   subsets: ['latin'],
@@ -70,6 +71,7 @@ export default function RootLayout({ children }) {
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteLd) }} />
+        <Analytics />
         <Nav />
         {children}
         <Footer />
