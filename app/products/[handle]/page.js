@@ -2,6 +2,7 @@ import { getProduct, getProducts, formatPrice } from '@/lib/shopify';
 import ProductGallery from '@/components/ProductGallery';
 import ProductCard from '@/components/ProductCard';
 import BuyBox from '@/components/BuyBox';
+import ViewContentTracker from '@/components/ViewContentTracker';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,6 +40,8 @@ export default async function ProductPage({ params }) {
   const variant = product.variants?.edges?.[0]?.node;
   const price = product.priceRange?.minVariantPrice;
   const priceText = formatPrice(price);
+  const amount = price?.amount;
+  const currency = price?.currencyCode || 'AED';
 
   let images = product.images?.edges?.map((e) => e.node).filter((n) => n && n.url) || [];
   if (images.length === 0 && product.featuredImage?.url) images = [product.featuredImage];
@@ -60,7 +63,7 @@ export default async function ProductPage({ params }) {
     offers: {
       '@type': 'Offer',
       price: price ? Number(price.amount).toFixed(2) : undefined,
-      priceCurrency: price?.currencyCode || 'AED',
+      priceCurrency: currency,
       availability: variant?.availableForSale ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       url: `https://skinovia.ae/products/${product.handle}`
     }
@@ -70,6 +73,12 @@ export default async function ProductPage({ params }) {
     <>
       <main className="pdp">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }} />
+        <ViewContentTracker
+          id={variant?.id}
+          title={product.title}
+          amount={amount}
+          currency={currency}
+        />
         <ProductGallery images={images} title={product.title} />
         <div>
           <h1>{product.title}</h1>
@@ -81,7 +90,14 @@ export default async function ProductPage({ params }) {
           </div>
           <div className="desc" dangerouslySetInnerHTML={{ __html: product.descriptionHtml || '' }} />
           <div style={{ marginTop: 28 }}>
-            <BuyBox variantId={variant?.id} available={variant?.availableForSale} price={priceText} />
+            <BuyBox
+              variantId={variant?.id}
+              available={variant?.availableForSale}
+              price={priceText}
+              productTitle={product.title}
+              amount={amount}
+              currency={currency}
+            />
           </div>
         </div>
       </main>
