@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
       </footer>
       <div className="foot-bar">
-        <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Dubai, UAE</span>
+        <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Ras Al Khaimah, UAE</span>
         <span className="social">
           {/*
             Instagram and TikTok intentionally absent (2026-07-20):
