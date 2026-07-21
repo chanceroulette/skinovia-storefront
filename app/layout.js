@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Assistant from '@/components/Assistant';
+import Analytics from '@/components/Analytics';
 
 const serif = Cormorant_Garamond({
   subsets: ['latin'],
@@ -24,7 +25,7 @@ const HERO_OG =
 
 export const metadata = {
   metadataBase: new URL('https://skinovia.ae'),
-  title: 'Skinovia — Curated Beauty, Delivered Fast | Dubai, UAE',
+  title: 'Skinovia — Curated Beauty, Delivered Fast Across the UAE',
   description:
     'A curated multi-brand beauty house in the UAE — hand-picked skincare, hair, make-up and beauty-tech, authentic and sealed, delivered fast across the Emirates. VAT included.',
   keywords: ['beauty UAE', 'skincare Dubai', 'makeup Dubai', 'beauty devices UAE', 'fast beauty delivery UAE', 'Skinovia'],
@@ -46,6 +47,10 @@ export const metadata = {
   }
 };
 
+// `sameAs` lists only profiles we actually own and have verified.
+// Instagram and TikTok are deliberately absent (2026-07-20): the old handles
+// pointed to a 404 and to an unrelated business ("Skinovia BD"). Add them here
+// — and to components/Footer.jsx — once the official profiles are registered.
 const orgLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -55,7 +60,7 @@ const orgLd = {
   email: 'admin@skinovia.ae',
   telephone: '+971543481109',
   address: { '@type': 'PostalAddress', streetAddress: "FXMB0229 Compass Building, Al Shuhada' Road", addressLocality: 'Ras Al Khaimah', addressRegion: 'Ras Al Khaimah', addressCountry: 'AE' },
-  sameAs: ['https://www.instagram.com/skinovia.uae', 'https://www.tiktok.com/@skinovia']
+  sameAs: ['https://www.facebook.com/skinovia.ae']
 };
 const siteLd = {
   '@context': 'https://schema.org',
@@ -70,6 +75,7 @@ export default function RootLayout({ children }) {
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteLd) }} />
+        <Analytics />
         <Nav />
         {children}
         <Footer />

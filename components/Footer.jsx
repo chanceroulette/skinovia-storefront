@@ -30,10 +30,16 @@ export default function Footer() {
         </div>
       </footer>
       <div className="foot-bar">
-        <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Dubai, UAE</span>
+        <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Ras Al Khaimah, UAE</span>
         <span className="social">
-          <a href="https://www.instagram.com/skinovia.uae" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a href="https://www.tiktok.com/@skinovia" target="_blank" rel="noopener noreferrer">TikTok</a>
+          {/*
+            Instagram and TikTok intentionally absent (2026-07-20):
+            @skinovia.skincare did not exist (Instagram 404) and @skinovia on
+            TikTok belongs to an unrelated business ("Skinovia BD", Bangladesh).
+            Add them back here — and to the `sameAs` array in app/layout.js —
+            once the official profiles are registered.
+          */}
+          <a href="https://www.facebook.com/skinovia.ae" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a href="https://wa.me/971543481109" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </span>
       </div>
