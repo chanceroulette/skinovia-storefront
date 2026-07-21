@@ -25,7 +25,7 @@ const HERO_OG =
 
 export const metadata = {
   metadataBase: new URL('https://skinovia.ae'),
-  title: 'Skinovia — Curated Beauty, Delivered Fast | Dubai, UAE',
+  title: 'Skinovia — Curated Beauty, Delivered Fast Across the UAE',
   description:
     'A curated multi-brand beauty house in the UAE — hand-picked skincare, hair, make-up and beauty-tech, authentic and sealed, delivered fast across the Emirates. VAT included.',
   keywords: ['beauty UAE', 'skincare Dubai', 'makeup Dubai', 'beauty devices UAE', 'fast beauty delivery UAE', 'Skinovia'],
