@@ -60,7 +60,7 @@ const orgLd = {
   email: 'admin@skinovia.ae',
   telephone: '+971543481109',
   address: { '@type': 'PostalAddress', streetAddress: "FXMB0229 Compass Building, Al Shuhada' Road", addressLocality: 'Ras Al Khaimah', addressRegion: 'Ras Al Khaimah', addressCountry: 'AE' },
-  sameAs: ['https://www.facebook.com/profile.php?id=61591043871607']
+  sameAs: ['https://www.facebook.com/skinovia.ae']
 };
 const siteLd = {
   '@context': 'https://schema.org',

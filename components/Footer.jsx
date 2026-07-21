@@ -39,7 +39,7 @@ export default function Footer() {
             Add them back here — and to the `sameAs` array in app/layout.js —
             once the official profiles are registered.
           */}
-          <a href="https://www.facebook.com/profile.php?id=61591043871607" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.facebook.com/skinovia.ae" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a href="https://wa.me/971543481109" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </span>
       </div>
