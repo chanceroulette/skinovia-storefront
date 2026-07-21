@@ -47,11 +47,10 @@ export const metadata = {
   }
 };
 
-// `sameAs` intentionally omitted (2026-07-20).
-// It previously listed https://www.instagram.com/skinovia.skincare (404) and
-// https://www.tiktok.com/@skinovia (an unrelated business, "Skinovia BD").
-// Declaring profiles we don't own tells Google the wrong entity is us.
-// Re-add as sameAs: [...] once the official Skinovia profiles exist.
+// `sameAs` lists only profiles we actually own and have verified.
+// Instagram and TikTok are deliberately absent (2026-07-20): the old handles
+// pointed to a 404 and to an unrelated business ("Skinovia BD"). Add them here
+// — and to components/Footer.jsx — once the official profiles are registered.
 const orgLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -60,7 +59,8 @@ const orgLd = {
   legalName: 'Opera Engineering FZ-LLC',
   email: 'admin@skinovia.ae',
   telephone: '+971543481109',
-  address: { '@type': 'PostalAddress', streetAddress: "FXMB0229 Compass Building, Al Shuhada' Road", addressLocality: 'Ras Al Khaimah', addressRegion: 'Ras Al Khaimah', addressCountry: 'AE' }
+  address: { '@type': 'PostalAddress', streetAddress: "FXMB0229 Compass Building, Al Shuhada' Road", addressLocality: 'Ras Al Khaimah', addressRegion: 'Ras Al Khaimah', addressCountry: 'AE' },
+  sameAs: ['https://www.facebook.com/profile.php?id=61591043871607']
 };
 const siteLd = {
   '@context': 'https://schema.org',

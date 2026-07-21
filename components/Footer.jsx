@@ -33,12 +33,13 @@ export default function Footer() {
         <span>© 2026 Skinovia — Opera Engineering FZ-LLC · Dubai, UAE</span>
         <span className="social">
           {/*
-            Instagram and TikTok links removed on 2026-07-20.
+            Instagram and TikTok intentionally absent (2026-07-20):
             @skinovia.skincare did not exist (Instagram 404) and @skinovia on
             TikTok belongs to an unrelated business ("Skinovia BD", Bangladesh).
-            Restore here — and in the Organization JSON-LD `sameAs` array in
-            app/layout.js — once the official profiles are registered.
+            Add them back here — and to the `sameAs` array in app/layout.js —
+            once the official profiles are registered.
           */}
+          <a href="https://www.facebook.com/profile.php?id=61591043871607" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a href="https://wa.me/971543481109" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </span>
       </div>
